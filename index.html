@@ -22,6 +22,7 @@
             </a>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
+                <a href="#nebula">Nebula</a>
                 <a href="#about">About</a>
                 <a href="https://docs.zeroleaf.dev" target="_blank">Docs</a>
                 <a href="https://github.com/udaytamma" target="_blank" class="nav-icon" aria-label="GitHub">
@@ -210,6 +211,191 @@
         </div>
     </section>
 
+    <!-- Nebula Section - Interview Prep -->
+    <section id="nebula" class="nebula">
+        <div class="section-header">
+            <h2>Nebula</h2>
+            <p>Interview preparation hub - Scaling & Architecture decisions</p>
+        </div>
+
+        <div class="nebula-auth" id="nebula-auth">
+            <div class="auth-card">
+                <div class="auth-icon">🔐</div>
+                <h3>Access Required</h3>
+                <p>Enter the secret key to access interview preparation materials</p>
+                <input type="password" id="nebula-key" placeholder="Enter key..." class="auth-input" onkeypress="if(event.key==='Enter')unlockNebula()">
+                <button onclick="unlockNebula()" class="btn btn-primary">Unlock</button>
+                <p class="auth-hint">Hint: A special name</p>
+            </div>
+        </div>
+
+        <div class="nebula-content" id="nebula-content" style="display: none;">
+            <div class="nebula-header">
+                <h3>Scaling AI Applications: Interview Q&A</h3>
+                <div class="nebula-filters">
+                    <button class="filter-btn active" onclick="filterQuestions('all')">All</button>
+                    <button class="filter-btn" onclick="filterQuestions('architecture')">Architecture</button>
+                    <button class="filter-btn" onclick="filterQuestions('scaling')">Scaling</button>
+                    <button class="filter-btn" onclick="filterQuestions('tradeoffs')">Trade-offs</button>
+                </div>
+            </div>
+
+            <div class="questions-grid" id="questions-grid">
+                <!-- Question 1 -->
+                <div class="question-card" data-tags="scaling,architecture">
+                    <div class="question-level senior">Sr. Manager</div>
+                    <h4>How would you scale this API to handle 10x more traffic?</h4>
+                    <div class="answer">
+                        <p><strong>Three-pronged approach:</strong></p>
+                        <ol>
+                            <li><strong>Response Caching (Redis)</strong> - Cache ingredient data (24-72h TTL), cache analysis reports by hash (1-6h TTL). Expected: 5x throughput.</li>
+                            <li><strong>API Key Load Balancing</strong> - Pool multiple Gemini keys with rate-aware selection. N keys = N× capacity.</li>
+                            <li><strong>Async Processing</strong> - Job queue (Celery/Redis Queue), return job ID immediately, poll for results.</li>
+                        </ol>
+                        <p><strong>Trade-off:</strong> Caching introduces stale data risk. Mitigation: Cache invalidation on safety updates, appropriate TTLs.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card" data-tags="architecture,tradeoffs">
+                    <div class="question-level director">Director</div>
+                    <h4>Why did you choose Qdrant over other vector databases?</h4>
+                    <div class="answer">
+                        <ul>
+                            <li>Free tier + cloud managed (1GB free)</li>
+                            <li>Excellent hybrid search (vector + payload filtering)</li>
+                            <li>Self-host option for cost optimization later</li>
+                            <li>Simple REST API for debugging</li>
+                        </ul>
+                        <p><strong>vs Pinecone:</strong> More expensive, no self-host</p>
+                        <p><strong>Trade-off:</strong> Less mature than Pinecone. Mitigation: Active development, good docs.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card" data-tags="scaling">
+                    <div class="question-level senior">Sr. Manager</div>
+                    <h4>How do you handle API rate limits from Gemini?</h4>
+                    <div class="answer">
+                        <p><strong>Scaled approach:</strong> Rate-limited key pool with multiple API keys. Track requests per key in sliding window. Rotate to available key or queue if all exhausted.</p>
+                        <p><strong>Trade-off:</strong> Multiple keys = more cost & complexity. Consider: Is traffic worth operational overhead?</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card" data-tags="architecture,tradeoffs">
+                    <div class="question-level executive">Executive</div>
+                    <h4>Why multi-agent architecture instead of single LLM call?</h4>
+                    <div class="answer">
+                        <p><strong>Multi-agent (Research → Analysis → Critic):</strong></p>
+                        <ul>
+                            <li>Separation of concerns</li>
+                            <li>Self-correction loop (Critic validates)</li>
+                            <li>Better accuracy through validation gates</li>
+                            <li>Easier to debug individual agents</li>
+                        </ul>
+                        <p><strong>Trade-off:</strong> 3x LLM calls = higher latency. For safety-critical info, accuracy > speed. Critic catches ~15% of issues.</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card" data-tags="architecture">
+                    <div class="question-level senior">Sr. Manager</div>
+                    <h4>How do you ensure consistency between mobile and web clients?</h4>
+                    <div class="answer">
+                        <ol>
+                            <li><strong>Single REST API</strong> - Both clients call same /analyze endpoint</li>
+                            <li><strong>Shared response schema</strong> - Pydantic models define contract</li>
+                            <li><strong>API versioning</strong> - /api/v1/analyze for future changes</li>
+                        </ol>
+                        <p><strong>Trade-off:</strong> Both clients get same data even if one needs less. Accept slight over-fetching for consistency.</p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card" data-tags="scaling,architecture">
+                    <div class="question-level director">Director</div>
+                    <h4>How would you add real-time updates for long-running requests?</h4>
+                    <div class="answer">
+                        <p><strong>Options:</strong> Polling (simple, inefficient), WebSockets (complex, bidirectional), SSE (real-time, simple)</p>
+                        <p><strong>Recommendation:</strong> Server-Sent Events (SSE) - each stage emits progress event. Simple, works everywhere, one-way is sufficient.</p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card" data-tags="architecture,tradeoffs">
+                    <div class="question-level director">Director</div>
+                    <h4>What's your testing strategy for LLM-based features?</h4>
+                    <div class="answer">
+                        <ol>
+                            <li><strong>Unit tests</strong> - Mock LLM, test business logic</li>
+                            <li><strong>Integration tests</strong> - Agent orchestration with fixtures</li>
+                            <li><strong>Contract tests</strong> - Verify LLM output schema</li>
+                            <li><strong>Evaluation tests</strong> - Accuracy on labeled datasets</li>
+                            <li><strong>Load tests</strong> - Performance under stress</li>
+                        </ol>
+                        <p><strong>Key insight:</strong> LLM outputs are non-deterministic. Use temperature=0.1, test schema compliance not exact text.</p>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card" data-tags="scaling,architecture">
+                    <div class="question-level senior">Sr. Manager</div>
+                    <h4>How do you handle failures gracefully?</h4>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>LLM timeout:</strong> Retry with exponential backoff</li>
+                            <li><strong>Rate limit (429):</strong> Switch to backup API key</li>
+                            <li><strong>Qdrant down:</strong> Fall back to Google Search only</li>
+                            <li><strong>Critic rejection:</strong> Retry up to 3x, then escalate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card" data-tags="tradeoffs">
+                    <div class="question-level executive">Executive</div>
+                    <h4>What would you do differently if starting over?</h4>
+                    <div class="answer">
+                        <ol>
+                            <li><strong>Async from day one</strong> - Easier to add concurrency later</li>
+                            <li><strong>Caching earlier</strong> - Would have saved dev API costs</li>
+                            <li><strong>Structured outputs</strong> - Gemini JSON mode for reliable parsing</li>
+                            <li><strong>Observability first</strong> - LangSmith from start</li>
+                            <li><strong>Horizontal scaling design</strong> - Stateless API from beginning</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card" data-tags="tradeoffs,scaling">
+                    <div class="question-level executive">Executive</div>
+                    <h4>How do you balance cost vs performance?</h4>
+                    <div class="answer">
+                        <p><strong>Cost per request:</strong> Gemini ~$0.01-0.05, Qdrant free tier, Railway ~$5/mo</p>
+                        <p><strong>Optimizations:</strong> Cache common ingredients (80% hit top 100), smaller models for validation, batch embeddings, appropriate TTLs.</p>
+                        <p><strong>Trade-off:</strong> Aggressive caching saves cost but risks stale safety data. Mitigation: 24h TTL + manual invalidation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nebula-resources">
+                <h4>Additional Resources</h4>
+                <div class="resource-links">
+                    <a href="https://docs.zeroleaf.dev/blog/scaling-ai-applications" target="_blank" class="resource-link">
+                        <span>📝</span> Full Blog Post: Scaling Decisions
+                    </a>
+                    <a href="https://docs.zeroleaf.dev/docs/ingredient-scanner/architecture" target="_blank" class="resource-link">
+                        <span>📐</span> Architecture Documentation
+                    </a>
+                    <a href="https://github.com/udaytamma/AiIngredientScanner" target="_blank" class="resource-link">
+                        <span>💻</span> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
@@ -283,5 +469,55 @@
             <p class="footer-copy">&copy; 2025 Zeroleaf. Built with focus.</p>
         </div>
     </footer>
+
+    <script>
+        // Nebula authentication
+        const NEBULA_KEY = 'appu';
+
+        function unlockNebula() {
+            const input = document.getElementById('nebula-key');
+            if (input.value.toLowerCase() === NEBULA_KEY) {
+                document.getElementById('nebula-auth').style.display = 'none';
+                document.getElementById('nebula-content').style.display = 'block';
+                localStorage.setItem('nebula-unlocked', 'true');
+            } else {
+                input.style.borderColor = '#dc3545';
+                input.value = '';
+                input.placeholder = 'Try again...';
+            }
+        }
+
+        // Check if already unlocked
+        if (localStorage.getItem('nebula-unlocked') === 'true') {
+            document.getElementById('nebula-auth').style.display = 'none';
+            document.getElementById('nebula-content').style.display = 'block';
+        }
+
+        // Filter questions by tag
+        function filterQuestions(tag) {
+            const cards = document.querySelectorAll('.question-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                const tags = card.dataset.tags.split(',');
+                if (tag === 'all' || tags.includes(tag)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle answer visibility
+        document.querySelectorAll('.question-card h4').forEach(h4 => {
+            h4.addEventListener('click', () => {
+                const card = h4.closest('.question-card');
+                card.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html>
