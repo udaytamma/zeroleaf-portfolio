@@ -363,6 +363,11 @@ ul {
     color: #2563eb;
 }
 
+.project-icon.mindgames-icon {
+    background: #fae8ff;
+    color: #a855f7;
+}
+
 .project-card h3 {
     font-size: 20px;
     font-weight: 600;
