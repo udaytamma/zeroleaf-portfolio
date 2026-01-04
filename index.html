@@ -17,7 +17,7 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="logo">
-                <span class="logo-icon">○</span>
+                <span class="logo-icon">Z</span>
                 <span class="logo-text">zeroleaf</span>
             </a>
             <div class="nav-links">
@@ -30,38 +30,86 @@
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                 </a>
+                <a href="https://linkedin.com/in/udaytamma" target="_blank" class="nav-icon" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
+        <div class="hero-bg-pattern"></div>
         <div class="hero-content">
-            <p class="hero-label">AI-Powered Applications</p>
-            <h1 class="hero-title">Building from<br><span class="highlight">zero to production</span></h1>
-            <p class="hero-subtitle">
-                End-to-end product development showcasing modern AI architectures,
-                from concept through deployment. Each project is fully functional
-                and production-ready.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://docs.zeroleaf.dev" class="btn btn-secondary">Read Documentation</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="visual-card">
-                <div class="visual-dots">
-                    <span></span><span></span><span></span>
+            <div class="hero-text">
+                <div class="hero-label-container">
+                    <span class="hero-label">Portfolio</span>
+                    <span class="hero-divider"></span>
+                    <span class="hero-sublabel">AI & Product Engineering</span>
                 </div>
-                <div class="visual-content">
-                    <code>
-                        <span class="code-keyword">const</span> project = {<br>
-                        &nbsp;&nbsp;idea: <span class="code-string">"concept"</span>,<br>
-                        &nbsp;&nbsp;execution: <span class="code-string">"full-stack"</span>,<br>
-                        &nbsp;&nbsp;status: <span class="code-string">"production"</span><br>
-                        };
-                    </code>
+                <h1 class="hero-title">
+                    Building production-ready<br>
+                    <span class="highlight">AI applications</span>
+                </h1>
+                <p class="hero-subtitle">
+                    End-to-end product development from architecture to deployment.
+                    Each project demonstrates real-world engineering with modern AI systems,
+                    scalable backends, and polished user experiences.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Production Ready</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Full</span>
+                        <span class="stat-label">Documentation</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                    <a href="https://docs.zeroleaf.dev" class="btn btn-secondary">Read Documentation</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="visual-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="visual-content">
+                        <code>
+                            <span class="code-comment">// From concept to production</span><br>
+                            <span class="code-keyword">const</span> project = {<br>
+                            &nbsp;&nbsp;architecture: <span class="code-string">"scalable"</span>,<br>
+                            &nbsp;&nbsp;stack: <span class="code-string">"modern"</span>,<br>
+                            &nbsp;&nbsp;tests: <span class="code-boolean">true</span>,<br>
+                            &nbsp;&nbsp;deployed: <span class="code-boolean">true</span><br>
+                            };
+                        </code>
+                    </div>
+                </div>
+                <div class="visual-floating-badge badge-1">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Enterprise Grade</span>
+                </div>
+                <div class="visual-floating-badge badge-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    <span>Fully Tested</span>
                 </div>
             </div>
         </div>
@@ -70,16 +118,137 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="section-header">
-            <h2>Projects</h2>
-            <p>Production-ready applications demonstrating end-to-end development</p>
+            <span class="section-label">Portfolio</span>
+            <h2>Featured Projects</h2>
+            <p>Production-ready applications demonstrating end-to-end development capabilities</p>
         </div>
 
+        <!-- Capstone Project - Full Width -->
+        <div class="capstone-showcase">
+            <article class="project-card capstone">
+                <div class="capstone-header">
+                    <div class="project-badge capstone-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Capstone Project
+                    </div>
+                    <div class="capstone-meta">
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            Sub-10ms Latency
+                        </span>
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            Production Ready
+                        </span>
+                    </div>
+                </div>
+
+                <div class="capstone-content">
+                    <div class="capstone-info">
+                        <div class="project-icon fraud-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M12 8v4"/>
+                                <circle cx="12" cy="16" r="1"/>
+                            </svg>
+                        </div>
+                        <h3>Real-Time Fraud Detection Platform</h3>
+                        <p>Enterprise-grade payment fraud detection system designed for high-throughput environments. Features velocity-based detection, configurable policy engine with hot-reload, and comprehensive evidence capture for dispute resolution.</p>
+
+                        <div class="project-tech">
+                            <span>FastAPI</span>
+                            <span>Redis</span>
+                            <span>PostgreSQL</span>
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>Docker</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://docs.zeroleaf.dev/docs/fraud-platform/overview" class="btn btn-primary btn-small">
+                                View Documentation
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/udaytamma/FraudDetection" class="btn btn-ghost btn-small" target="_blank">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="capstone-features">
+                        <h4>Key Capabilities</h4>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Real-Time Decisions</strong>
+                                    <span>Sub-10ms P99 latency for fraud scoring</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>5 Detection Signals</strong>
+                                    <span>Card testing, velocity, geo, bot, friendly fraud</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Hot-Reload Policy</strong>
+                                    <span>Update rules without restart</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Evidence Capture</strong>
+                                    <span>Complete audit trail for disputes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Other Projects Grid -->
         <div class="project-grid">
-            <!-- Project 1: Ingredient Scanner -->
-            <article class="project-card featured">
-                <div class="project-badge">Featured</div>
+            <!-- Project: Ingredient Scanner -->
+            <article class="project-card">
                 <div class="project-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                         <path d="M2 17l10 5 10-5"/>
                         <path d="M2 12l10 5 10-5"/>
@@ -93,7 +262,6 @@
                     <span>FastAPI</span>
                     <span>Qdrant</span>
                     <span>React Native</span>
-                    <span>Streamlit</span>
                 </div>
 
                 <div class="project-features">
@@ -101,7 +269,7 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
-                        <span>Multi-agent AI architecture</span>
+                        <span>Multi-agent architecture</span>
                     </div>
                     <div class="feature">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -124,11 +292,10 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="https://ingredient-analyzer.zeroleaf.dev/" class="btn btn-small btn-primary" target="_blank">Demo-Web</a>
-                    <a href="https://ia-mobile.zeroleaf.dev/" class="btn btn-small btn-primary" target="_blank">Demo-Mobile</a>
-                    <a href="https://docs.zeroleaf.dev/docs/ingredient-scanner/overview" class="btn btn-small btn-ghost">Documentation</a>
+                    <a href="https://ingredient-analyzer.zeroleaf.dev/" class="btn btn-small btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://docs.zeroleaf.dev/docs/ingredient-scanner/overview" class="btn btn-small btn-ghost">Docs</a>
                     <a href="https://github.com/udaytamma/AiIngredientScanner" class="btn btn-small btn-ghost" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
                         Code
@@ -136,10 +303,10 @@
                 </div>
             </article>
 
-            <!-- Project 2: Email Assistant -->
+            <!-- Project: Email Assistant -->
             <article class="project-card">
                 <div class="project-icon email-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
@@ -184,7 +351,7 @@
                 <div class="project-links">
                     <a href="https://docs.zeroleaf.dev/docs/email-assistant/overview" class="btn btn-small btn-ghost">Documentation</a>
                     <a href="https://github.com/udaytamma/emailAssistant" class="btn btn-small btn-ghost" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
                         Code
@@ -192,10 +359,10 @@
                 </div>
             </article>
 
-            <!-- Project 3: MindGames -->
+            <!-- Project: MindGames -->
             <article class="project-card">
                 <div class="project-icon mindgames-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2a9 9 0 0 1 9 9c0 3.9-2.5 7.2-6 8.4V21a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.6c-3.5-1.2-6-4.5-6-8.4a9 9 0 0 1 9-9z"/>
                         <path d="M9 10h.01M15 10h.01"/>
                         <path d="M9.5 15a3.5 3.5 0 0 0 5 0"/>
@@ -208,7 +375,7 @@
                     <span>Next.js 14</span>
                     <span>TypeScript</span>
                     <span>Tailwind</span>
-                    <span>React Context</span>
+                    <span>Jest</span>
                 </div>
 
                 <div class="project-features">
@@ -228,7 +395,7 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
-                        <span>Customizable operations mix</span>
+                        <span>Customizable operations</span>
                     </div>
                     <div class="feature">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -239,10 +406,10 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="https://mindgames.zeroleaf.dev/" class="btn btn-small btn-primary" target="_blank">Demo</a>
-                    <a href="https://docs.zeroleaf.dev/docs/mindgames/overview" class="btn btn-small btn-ghost">Documentation</a>
+                    <a href="https://mindgames.zeroleaf.dev/" class="btn btn-small btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://docs.zeroleaf.dev/docs/mindgames/overview" class="btn btn-small btn-ghost">Docs</a>
                     <a href="https://github.com/udaytamma/MindGames" class="btn btn-small btn-ghost" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
                         Code
@@ -254,57 +421,94 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="about-content">
-            <h2>About zeroleaf</h2>
-            <div class="about-text">
-                <p>
-                    <strong>zeroleaf</strong> — derived from "Aparna," meaning "without even a leaf" —
-                    represents building with unwavering focus and dedication. Like Parvati's legendary
-                    penance, each project here is crafted from nothing to production-ready.
-                </p>
-                <p>
-                    This portfolio demonstrates end-to-end product development: from ideation and
-                    architecture through implementation, testing, and deployment. Every application
-                    is fully functional, documented, and built with modern best practices.
-                </p>
+        <div class="about-container">
+            <div class="about-header">
+                <span class="section-label">About</span>
+                <h2>Building with Purpose</h2>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>AI & ML</h4>
-                    <ul>
-                        <li>Large Language Models</li>
-                        <li>Multi-agent Systems</li>
-                        <li>RAG Architecture</li>
-                        <li>Vector Databases</li>
-                    </ul>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">
+                        <strong>zeroleaf</strong> - derived from "Aparna," meaning "without even a leaf" -
+                        represents building with unwavering focus and dedication.
+                    </p>
+                    <p>
+                        Like Parvati's legendary penance, each project here is crafted from concept to production-ready.
+                        This portfolio demonstrates end-to-end product development: from ideation and architecture
+                        through implementation, testing, and deployment.
+                    </p>
+                    <p>
+                        Every application is fully functional, thoroughly documented, and built with modern best practices.
+                    </p>
                 </div>
-                <div class="skill-category">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li>Python / FastAPI</li>
-                        <li>REST APIs</li>
-                        <li>Database Design</li>
-                        <li>Cloud Deployment</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>React / React Native</li>
-                        <li>TypeScript</li>
-                        <li>Mobile Development</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Product</h4>
-                    <ul>
-                        <li>Product Strategy</li>
-                        <li>Technical Leadership</li>
-                        <li>System Architecture</li>
-                        <li>Documentation</li>
-                    </ul>
+
+                <div class="skills-section">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                                <h4>AI & ML</h4>
+                            </div>
+                            <ul>
+                                <li>Large Language Models</li>
+                                <li>Multi-agent Systems</li>
+                                <li>RAG Architecture</li>
+                                <li>Vector Databases</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                                <h4>Backend</h4>
+                            </div>
+                            <ul>
+                                <li>Python / FastAPI</li>
+                                <li>REST APIs</li>
+                                <li>Database Design</li>
+                                <li>Cloud Deployment</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                                <h4>Frontend</h4>
+                            </div>
+                            <ul>
+                                <li>React / React Native</li>
+                                <li>TypeScript</li>
+                                <li>Mobile Development</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                                <h4>Product</h4>
+                            </div>
+                            <ul>
+                                <li>Product Strategy</li>
+                                <li>Technical Leadership</li>
+                                <li>System Architecture</li>
+                                <li>Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -314,7 +518,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="logo-icon">○</span>
+                <span class="logo-icon">Z</span>
                 <span>zeroleaf.dev</span>
             </div>
             <div class="footer-links">
@@ -322,7 +526,7 @@
                 <a href="https://linkedin.com/in/udaytamma" target="_blank">LinkedIn</a>
                 <a href="mailto:hello@zeroleaf.dev">Contact</a>
             </div>
-            <p class="footer-copy">&copy; 2025 zeroleaf. Built with focus.</p>
+            <p class="footer-copy">2025 zeroleaf. Built with focus.</p>
         </div>
     </footer>
 
