@@ -588,7 +588,7 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
     gap: 28px;
 }
 
@@ -904,46 +904,234 @@ ul {
         display: none;
     }
 
+    .hero {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
     .hero-content {
-        padding-top: 100px;
+        padding: 100px 16px 40px;
+        gap: 32px;
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
     }
 
     .hero-stats {
-        flex-direction: column;
-        gap: 16px;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 12px;
     }
 
     .hero-cta {
         flex-direction: column;
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
+        padding: 14px 20px;
+    }
+
+    .visual-card {
+        max-width: 100%;
+    }
+
+    .visual-content {
+        padding: 20px;
+    }
+
+    .visual-content code {
+        font-size: 12px;
+    }
+
+    /* Projects Section Mobile */
+    .projects {
+        padding: 60px 16px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .section-header p {
+        font-size: 15px;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .capstone-content {
+    .project-card {
         padding: 24px;
     }
 
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    .project-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .project-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-links .btn {
+        justify-content: center;
+    }
+
+    /* Capstone Card Mobile */
+    .capstone-showcase {
+        margin-bottom: 24px;
+    }
+
+    .capstone-header {
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .project-badge.capstone-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .capstone-meta {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .meta-item {
+        font-size: 12px;
+    }
+
+    .capstone-content {
+        padding: 20px;
+        gap: 24px;
+    }
+
     .capstone-info h3 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .capstone-info > p {
+        font-size: 14px;
+    }
+
+    .capstone-info .project-links {
+        flex-direction: column;
+    }
+
+    .capstone-features h4 {
+        font-size: 12px;
+    }
+
+    .features-grid {
+        gap: 12px;
+    }
+
+    .feature-item {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .feature-item .feature-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .feature-item .feature-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .feature-text strong {
+        font-size: 13px;
+    }
+
+    .feature-text span {
+        font-size: 12px;
+    }
+
+    /* About Section Mobile */
+    .about {
+        padding: 60px 16px;
+    }
+
+    .about-header h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-lead {
+        font-size: 16px !important;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .skill-header h4 {
+        font-size: 14px;
+    }
+
+    .skill-category ul li {
+        font-size: 13px;
+        padding: 5px 0;
+        padding-left: 14px;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: 32px 16px;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        gap: 20px;
     }
 }
